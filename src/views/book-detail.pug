@@ -1,0 +1,40 @@
+extends layout
+block title
+    title= book.title
+
+block content
+    a(href='/')
+        button.base-btn.w3-display-position.w3-margin-left.w3-hover-blue-gray Назад
+
+    h3.book-detail.w3-center Книга
+    form(method="POST")#book-form.w3-center
+        div.fields
+            fieldset
+                label(for="title-field") Название
+                input(placeholder="Название" value=book.title name="title" required maxlength=50)#title-field
+
+                label(for="author-field") Автор
+                input(placeholder="Автор" value=book.author name="author" required maxlength=50 lang="ru")#author-field
+
+                label(for="year-field") Год
+                input(type="number" placeholder="Год" value=book.year name="year" required min=0 max=9999)#year-field
+            fieldset
+                label(for="availability-field") Наличие
+                input(disabled placeholder="Наличие" class=(book.return_date ? "w3-red" : "w3-green")
+                    value=(book.return_date ? "Отсутствует" : "В наличии") name="availability")#availability-field
+
+                label(for="return-date-field") Дата возврата
+                input(disabled value=book.return_date name="return_date" placeholder="гггг.мм.дд")#return-date-field
+
+                label(for="reader-book-field") Читатель
+                input(disabled value=book.reader name="reader" placeholder="Имя читателя")#reader-book-field
+
+        .delete-detail-icon
+            i.fa.fa-trash.fa-solid.fa-2x.w3-right
+        button#issuance-btn.base-btn.w3-hover-blue-gray= book.return_date ? "Вернуть" : "Выдать"
+        button.base-btn.w3-hover-blue-gray Сохранить
+    include includes/messages/error-box
+    include includes/messages/success-box
+    include includes/dialogs/delete-book-dialog
+    include includes/dialogs/issuance-book-dialog
+    script(defer src="../public/javascript/bookDetail.js" type="module")

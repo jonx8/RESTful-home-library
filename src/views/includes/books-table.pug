@@ -1,0 +1,30 @@
+section.books-list-section
+    div.table-wrapper
+        table.w3-table#books-list-table
+            thead
+                tr
+                    th ID
+                    th Название
+                    th Автор
+                    th Год
+                    th Наличие
+                    th Дата возврата
+                    th
+            tbody
+                each book in books
+                    tr
+                        td.id-cell= book.id
+                        td.title-cell
+                            a(href="/books/" + book.id)= book.title
+                        td.author-cell= book.author
+                        td.year-cell= book.year
+                        td.availablity-cell
+                            if book.return_date
+                                span.book-available-false Отсутствует
+                            else
+                                span.book-available-true В наличии
+                        td.return-date-cell= book.return_date
+                        td.delete-btn-cell
+                            a(href="/books/" + book.id).deleteIconLink
+                                i.fa.fa-solid.fa-trash.fa-bounce.fa-2x
+

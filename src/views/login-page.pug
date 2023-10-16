@@ -1,0 +1,16 @@
+extends layout
+
+block title
+    title Аутентификация
+block content
+    h4.w3-center.authorization-header Войти
+    .w3-center.w3-text-red.auth-message= authMessage
+    form(method="POST" action="/login/password").w3-center#login-form
+        fieldset
+            label(for="username-field") Имя пользователя
+            input(name="username" placeholder="Имя пользователя" required)#username-field
+
+            label(for="password-field") Пароль
+            input(type="password" name="password" placeholder="Пароль" required)#password-field
+
+        button.base-btn#login-btn Войти

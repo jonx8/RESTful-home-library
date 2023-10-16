@@ -1,0 +1,19 @@
+extends layout
+
+block title
+    title Библиотека
+
+block content
+    section.controls-section
+        label(for="sort-selector") Сортировка:
+            select(name="sort-selector")#sort-selector.w3-round-large
+                option(value="default") По умолчанию
+                option(value="available") По наличию
+                option(value="return_date") По дате возврата
+        button.base-btn.w3-round-medium.w3-hover-blue-gray#new-book-btn Новая книга
+    include includes/books-table
+    include includes/dialogs/new-book-dialog
+    include includes/dialogs/delete-book-dialog
+    include includes/messages/error-box
+    include includes/messages/success-box
+    script(defer src="../public/javascript/index.js" type="module")

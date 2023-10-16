@@ -1,0 +1,10 @@
+header
+    nav.navbar
+        img(src="../public/images/lib-icon.png").lib-icon
+        .nav-title
+            h3
+                a(href='/') Библиотека
+        .right-block
+            if username
+                .user-section.w3-right
+                    a(href="/logout").w3-center.w3-hover-text-red Выйти

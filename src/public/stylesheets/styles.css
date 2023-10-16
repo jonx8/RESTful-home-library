@@ -1,0 +1,296 @@
+* {
+    font-family: Montserrat, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7F1F1;
+}
+
+dialog {
+    border-width: 1px;
+}
+
+h3.book-detail {
+    font-family: Montserrat, serif;
+    color: #5E5BFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+h4 {
+    font-family: Montserrat, serif;
+}
+
+form input {
+    padding: 5px 15px;
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid #4A4A4B;
+}
+
+i.fa-trash {
+    color: #ff0040;
+    pointer-events: visible;
+}
+
+
+#book-form, #login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#book-form > .fields {
+    display: flex;
+    flex-direction: row;
+}
+
+#book-form .base-btn {
+    width: 10%;
+}
+
+#book-form > .fields > fieldset {
+    display: flex;
+    flex-direction: column;
+    border-width: 0;
+}
+
+
+#books-list-table {
+    border: black solid 1px;
+    background-color: #FFEFEF;
+}
+
+#books-list-table td, th {
+    border: black solid 1px;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+#books-list-table > thead > tr > th {
+    background-color: #FFD0D0;
+    font-size: 16px;
+}
+
+
+#error-box, #success-box {
+    width: 30%;
+    opacity: 97%;
+    visibility: hidden;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: #874EFF;
+    padding: 10px;
+    margin-top: 20%;
+}
+
+#issuance-form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#issuance-form > input {
+    margin: 10px;
+}
+
+
+#login-form {
+    margin: 3%;
+}
+
+#login-form > fieldset {
+    display: flex;
+    flex-direction: column;
+    border-width: 0;
+}
+
+#new-book-btn {
+    margin-right: 3%;
+    width: 12%;
+    height: 3em;
+}
+
+#required-non-empty-msg {
+    color: #FF2E00;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, serif;
+}
+
+
+#sort-selector {
+    margin: 10px;
+    padding: 3px;
+}
+
+.auth-message {
+    padding: 0;
+    margin: 0;
+}
+
+.author-label {
+    padding: 0;
+    margin: 0;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.authorization-header {
+    color: #5E5BFF;
+    font-weight: 600;
+    margin: 20px;
+    font-size: 32px
+}
+
+
+.base-btn {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 8px;
+    background: #5E5BFF;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.book-available-false {
+    font-weight: 700;
+    color: #FF2E00;
+}
+
+.book-available-true {
+    font-weight: 700;
+    color: #13AF35;
+}
+
+.books-list-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.change-available-btn-cell > button {
+    background: #FFF;
+    border: black solid 1px;
+    width: 100px;
+    padding: 3px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+.close-icon:hover {
+    cursor: pointer;
+}
+
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.controls-section > label {
+    margin-left: 2%;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.delete-detail-icon {
+    width: 50%;
+    padding: 10px;
+}
+
+
+
+.table-wrapper {
+    overflow: scroll;
+}
+
+
+
+
+.lib-icon {
+    padding: 7px 0;
+    margin-left: 20px;
+    height: 4%;
+    width: 4%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #874EFF;
+}
+
+
+.nav-title > h3 {
+    color: #FFF;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.new-book-dialog > #book-form > .base-btn {
+    width: 40%;
+}
+
+
+.return-date-cell {
+    width: 100px;
+}
+
+.right-block {
+    padding: 7px 0;
+    margin-right: 20px;
+    height: 5%;
+    width: 5%;
+}
+
+
+.title-cell > a {
+    font-weight: 600;
+    color: #5200FF;
+}
+
+.title-cell > a:hover {
+    color: #ff253a;
+}
+
+.user-section {
+    color: #F7F1F1;
+    font-size: 16px;
+    font-weight: 600;
+    width: 5em;
+    display: flex;
+    flex-flow: column;
+}
+
+.year-cell {
+    width: 20px;
+}

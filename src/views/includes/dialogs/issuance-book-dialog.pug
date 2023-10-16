@@ -1,0 +1,12 @@
+dialog.issuance-book-dialog
+    i(style="color: #ff0040;").fa.fa-times.fa-lg.close-icon
+    h4.w3-center.w3-text-deep-purple Выдача книги
+    p#required-non-empty-msg Необходимо заполнить все поля!
+    form(method="POST")#issuance-form.w3-center
+        label(for="return-field") Дата возврата
+        input(placeholder="гггг.мм.дд" name="title" required=10)#return-field
+
+        label(for="reader-field") Читатель
+        input(placeholder="Имя читателя" name="reader" required=30)#reader-field
+
+        button.base-btn.w3-hover-blue-gray Выдать

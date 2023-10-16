@@ -1,0 +1,13 @@
+dialog.new-book-dialog
+    i(style="color: #ff0040;").fa.fa-times.fa-lg.close-icon
+    h4.w3-center.w3-text-deep-purple Новая книга
+    form(method="POST")#book-form.w3-center
+        label(for="title-field") Название
+        input(placeholder="Название" name="title" maxlength=50 required)#title-field
+
+        label(for="author-field") Автор
+        input(placeholder="Автор" name="author" maxlength=50 required)#author-field
+
+        label(for="year-field") Год
+        input(placeholder="Год" name="year" maxlength=4)#year-field
+        button.base-btn.w3-hover-blue-gray Сохранить
